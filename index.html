@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main-container">
+    <h1>Expense tracker</h1>
+
+    <section id="balance">
+        <h3 class="balance-title">Your balance</h3>
+        <h2 id="balance-amount">0,00 €</h2>
+        <div class="balance-container">
+            <div class="income-box">
+                <h4 class="box-data">Income</h4>
+                <p id="user-income" class="user-income">0,00 €</p>
+            </div>
+            <div class="expense-box">
+                <h4 class="box-data">Expense</h4>
+                <p id="user-expense" class="user-expense">0,00 €</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="history">
+        <h3>History</h3>
+        <ul id="transaction-history"></ul>
+    </section>
+
+    <section id="new-transaction">
+        <h3>Add a new transaction</h3>
+        <form action="" id="transaction-data">
+        <div>
+            <div><label for="concept">Concept</label></div>
+            <div><input type="text" name="concept" id="add-concept" placeholder="Add a new concept"></div>
+        </div>
+        <div>
+            <div><label for="amount">Amount<br>(negative = expense, positive = income</label></div>
+            <div><input type="number" name="amount" id="add-amount" placeholder="Please enter an amount"></div>
+        </div>
+        <div>
+            <button id="transaction-button">Add your transaction</button>
+        </div>
+    </form>
+    </section>
+</div>
+</body>
+</html>
