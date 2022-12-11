@@ -31,12 +31,12 @@ function newTransaction(event) {
 }
 
 function addTransaction(transaction) {
-
+    const sign = transaction.amount < 0 ? '' : '+';
     const newItem = document.createElement('li');
     newItem.classList.add(transaction.amount < 0 ? 'minus' : 'plus');
 
     newItem.innerHTML = `
-        ${transaction.concept} <span>${transaction.amount}</span>
+        ${transaction.concept} <span>${sign}${transaction.amount}</span>
         <button class="delete-btn" onclick="deleteTransaction(${transaction.id})">x</button>
     `
     history.appendChild(newItem)
