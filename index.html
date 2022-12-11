@@ -7,9 +7,11 @@
     <title>Expense Tracker</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div id="main-container">
-    <h1>Expense tracker</h1>
+
+    <div class="main-container">
+        <h1>Expense tracker</h1>
 
     <section id="balance">
         <h3 class="balance-title">Your balance</h3>
@@ -17,26 +19,27 @@
         <div class="balance-container">
             <div class="income-box">
                 <h4 class="box-data">Income</h4>
-                <p id="user-income" class="user-income">0,00 €</p>
+                <p id="income" class="user-income">0,00 €</p>
             </div>
             <div class="expense-box">
                 <h4 class="box-data">Expense</h4>
-                <p id="user-expense" class="user-expense">0,00 €</p>
+                <p id="expense" class="user-expense">0,00 €</p>
             </div>
-        </div>
+        </div>      
     </section>
 
     <section id="history">
         <h3>History</h3>
-        <ul id="transaction-history"></ul>
+        <ul id="transaction-history">
+        </ul>
     </section>
 
     <section id="new-transaction">
         <h3>Add a new transaction</h3>
-        <form action="" id="transaction-data">
+        <form id="transaction-data" novalidate>
         <div>
             <div><label for="concept">Concept</label></div>
-            <div><input type="text" name="concept" id="add-concept" placeholder="Add a new concept"></div>
+            <div><input type="text" name="concept" id="add-concept" placeholder="Enter a new concept" required></div>
         </div>
         <div>
             <div><label for="amount">Amount<br><p>(negative = expense, positive = income)</p></div>
@@ -48,5 +51,6 @@
     </form>
     </section>
 </div>
+<script src="index.js"></script>
 </body>
 </html>
