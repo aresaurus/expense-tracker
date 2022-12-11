@@ -1,2 +1,2 @@
 # expense-tracker
-Expense Tracker web app challenge
+Expense Tracker web app challenge using HTML, CSS and JavaScript.
